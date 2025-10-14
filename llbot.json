@@ -1,0 +1,56 @@
+{
+  "users": {
+    "618397146": {
+      "language": "English",
+      "quiz_score": 16,
+      "words_learned": 0,
+      "last_activity": "2025-10-14T19:18:42.470507"
+    }
+  },
+  "words": {
+    "618397146": [
+      {
+        "word": "cat",
+        "translation": "кіт",
+        "known": false,
+        "added_at": "2025-10-14T19:21:01.854629"
+      },
+      {
+        "word": "Breeze",
+        "translation": "бриз",
+        "known": false,
+        "added_at": "2025-10-14T19:22:09.601992"
+      },
+      {
+        "word": "Dawn",
+        "translation": "Світанок",
+        "known": false,
+        "added_at": "2025-10-14T19:23:01.929793"
+      },
+      {
+        "word": "dog",
+        "translation": "Собака",
+        "known": false,
+        "added_at": "2025-10-14T19:30:17.357188"
+      },
+      {
+        "word": "fly",
+        "translation": "літати",
+        "known": false,
+        "added_at": "2025-10-14T19:30:26.828598"
+      },
+      {
+        "word": "god",
+        "translation": "бог",
+        "known": false,
+        "added_at": "2025-10-14T19:33:14.072559"
+      },
+      {
+        "word": "Horizon",
+        "translation": "горизонт",
+        "known": false,
+        "added_at": "2025-10-14T19:36:32.834028"
+      }
+    ]
+  }
+}
