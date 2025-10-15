@@ -16,7 +16,7 @@ from apscheduler.triggers.cron import CronTrigger
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # --- Налаштування ---
-BOT_TOKEN = "8270366283:AAHxjn64fkdB9xXDIkVwe7h2iiJST5aBemU"
+BOT_TOKEN = "8153329613:AAFNii0_bIgGZ0s-cvhDR4u25kasIplNx20"
 MISTRAL_API_KEY = "bfDtPtgSLxjZZSsEnox8vv0Z094YacXO"
 
 DB_PATH = "llbot.json"
