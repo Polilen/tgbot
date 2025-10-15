@@ -7,6 +7,7 @@ import pytz
 import asyncio
 import requests
 import re
+import base64
 
 from aiogram import Bot, Dispatcher, types, executor
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
@@ -50,7 +51,8 @@ def save_to_github():
     file_path = DB_PATH
 
     if not token:
-        return  # Якщо токену немає — пропускаємо
+        logger.warning("⚠️ GITHUB_TOKEN не задано, пропускаю оновлення GitHub.")
+        return
 
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -62,19 +64,26 @@ def save_to_github():
     r = requests.get(url, headers=headers)
     sha = r.json().get("sha") if r.status_code == 200 else None
 
+    # Кодуємо файл у Base64 — GitHub цього вимагає
+    encoded_content = base64.b64encode(content.encode("utf-8")).decode("utf-8")
+
     data = {
         "message": "update JSON",
-        "content": content.encode("utf-8").decode("utf-8"),
+        "content": encoded_content,
         "sha": sha
     }
+
     response = requests.put(url, headers=headers, json=data)
     if response.status_code not in (200, 201):
-        logger.error(f"Не вдалося оновити JSON у GitHub: {response.text}")
+        logger.error(f"❌ Не вдалося оновити JSON у GitHub: {response.text}")
+    else:
+        logger.info("✅ JSON успішно оновлено у GitHub.")
 
 
 def save_db(db):
     with open(DB_PATH, "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=2)
+    save_to_github()
 
 def ensure_user(user_id: int, language: str = None):
     db = load_db()
