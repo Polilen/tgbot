@@ -62,6 +62,12 @@
         "translation": "загадка",
         "known": false,
         "added_at": "2025-10-15T11:18:42.221574"
+      },
+      {
+        "word": "Glimmer",
+        "translation": "блиск",
+        "known": false,
+        "added_at": "2025-10-15T11:18:42.986455"
       }
     ]
   }
