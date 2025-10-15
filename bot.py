@@ -229,7 +229,7 @@ async def cmd_help(message: types.Message):
         "/quiz — почати вікторину\n"
         "/stats — показати статистику\n"
         "/editword номер слово-переклад — редагувати слово\n"
-        "/deleteword номер — видалити слово за номером\n"
+        "/delword номер — видалити слово за номером\n"
         "/clearwords — видалити всі слова\n"
     )
     await message.answer(help_text, parse_mode="Markdown")
