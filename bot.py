@@ -41,6 +41,36 @@ def load_db():
     with open(DB_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def save_to_github():
+    """
+    Якщо задано GITHUB_TOKEN і REPO_NAME, заливає оновлений JSON у GitHub.
+    """
+    token = os.getenv("GITHUB_TOKEN")
+    repo = os.getenv("GITHUB_REPO", "Polilen/tgbot")
+    file_path = DB_PATH
+
+    if not token:
+        return  # Якщо токену немає — пропускаємо
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    url = f"https://api.github.com/repos/{repo}/contents/{file_path}"
+    headers = {"Authorization": f"token {token}"}
+
+    # Отримуємо SHA поточного файлу (якщо існує)
+    r = requests.get(url, headers=headers)
+    sha = r.json().get("sha") if r.status_code == 200 else None
+
+    data = {
+        "message": "update JSON",
+        "content": content.encode("utf-8").decode("utf-8"),
+        "sha": sha
+    }
+    response = requests.put(url, headers=headers, json=data)
+    if response.status_code not in (200, 201):
+        logger.error(f"Не вдалося оновити JSON у GitHub: {response.text}")
+
 
 def save_db(db):
     with open(DB_PATH, "w", encoding="utf-8") as f:
