@@ -50,6 +50,12 @@
         "translation": "горизонт",
         "known": false,
         "added_at": "2025-10-14T19:36:32.834028"
+      },
+      {
+        "word": "Whisper",
+        "translation": "шепот",
+        "known": false,
+        "added_at": "2025-10-15T11:18:41.354413"
       }
     ]
   }
