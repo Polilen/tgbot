@@ -68,6 +68,12 @@
         "translation": "блиск",
         "known": false,
         "added_at": "2025-10-15T11:18:42.986455"
+      },
+      {
+        "word": "Echo",
+        "translation": "ехо",
+        "known": false,
+        "added_at": "2025-10-15T11:18:43.912620"
       }
     ]
   }
