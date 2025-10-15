@@ -227,26 +227,19 @@ async def cmd_help(message: types.Message):
 
 @dp.message_handler(commands=["start"])
 async def cmd_start(message: types.Message):
-    kb = ReplyKeyboardMarkup(resize_keyboard=True)
-    kb.add(KeyboardButton("English"), KeyboardButton("Deutsch"), KeyboardButton("Español"))
-    await message.answer("Привіт! Обери мову для вивчення:", reply_markup=kb)
-
-@dp.message_handler(lambda msg: msg.text in ["English", "Deutsch", "Español"])
-async def choose_language(message: types.Message):
-    language = message.text
+    language = "English"
     ensure_user(message.from_user.id, language)
     await message.answer(
-        f"Мова встановлена: {language}.\n"
-        "Основні команди для початку роботи:\n"
+        "👋 Привіт! Це бот для вивчення англійських слів.\n\n"
+        "Основні команди для початку:\n"
         "/addword слово-переклад — додати слово\n"
-        "/translate слово — додати слово з перекладом\n"
-        "/aiword число — додати вказану кількість слів через AI\n"
-        "/aitopic тема число — додати слова по темі через AI (до 10)\n"
-        "/mywords — показати свої слова\n"
-        "/quiz — почати вікторину\n"
-        "Але при бажанні можна глянути усі команди за допомогою команди /help"
+        "/translate слово — перекласти слово через AI\n"
+        "/aiword число — згенерувати слова через AI\n"
+        "/aitopic тема число — згенерувати слова по темі\n"
+        "/mywords — переглянути свої слова\n"
+        "/quiz — почати вікторину\n\n"
+        "Щоб побачити усі команди, введи /help."
     )
-
 
 @dp.message_handler(commands=['addword'])
 async def cmd_addword(message: types.Message):
