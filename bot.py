@@ -16,7 +16,7 @@ from apscheduler.triggers.cron import CronTrigger
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # --- Налаштування ---
-BOT_TOKEN = "8153329613:AAFNii0_bIgGZ0s-cvhDR4u25kasIplNx20"
+BOT_TOKEN = "8270366283:AAHxjn64fkdB9xXDIkVwe7h2iiJST5aBemU"
 MISTRAL_API_KEY = "bfDtPtgSLxjZZSsEnox8vv0Z094YacXO"
 
 DB_PATH = "llbot.json"
@@ -206,6 +206,15 @@ def mistral_generate_topic_words(topic: str, n: int = 5) -> dict:
         logger.error(f"Mistral API error: {response.text}")
     return words_dict
 
+
+@dp.message_handler(lambda msg: msg.text in ["/help", "/quiz", "/start"])
+async def handle_buttons(message: types.Message):
+    if message.text == "/help":
+        await cmd_help(message)
+    elif message.text == "/quiz":
+        await cmd_quiz(message)
+    elif message.text == "/start":
+        await cmd_start(message)
 # --- Обробники команд ---
 @dp.message_handler(commands=["help"])
 async def cmd_help(message: types.Message):
@@ -227,20 +236,30 @@ async def cmd_help(message: types.Message):
 
 @dp.message_handler(commands=["start"])
 async def cmd_start(message: types.Message):
+    # Устанавливаем язык по умолчанию
     language = "English"
     ensure_user(message.from_user.id, language)
+    
+    # Создаём клавиатуру с кнопками
+    kb = ReplyKeyboardMarkup(resize_keyboard=True)
+    kb.row(
+        KeyboardButton("/help"),
+        KeyboardButton("/quiz"),
+        KeyboardButton("/start")
+    )
+    
     await message.answer(
         "👋 Привіт! Це бот для вивчення англійських слів.\n\n"
-        "Основні команди для початку:\n"
+        "Можеш скористатися кнопками нижче для навігації або ввести команду вручну:\n"
         "/addword слово-переклад — додати слово\n"
         "/translate слово — перекласти слово через AI\n"
         "/aiword число — згенерувати слова через AI\n"
         "/aitopic тема число — згенерувати слова по темі\n"
         "/mywords — переглянути свої слова\n"
         "/quiz — почати вікторину\n\n"
-        "Щоб побачити усі команди, введи /help."
+        "Щоб побачити усі команди, введи /help.",
+        reply_markup=kb
     )
-
 @dp.message_handler(commands=['addword'])
 async def cmd_addword(message: types.Message):
     args = message.get_args()
