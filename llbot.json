@@ -4,82 +4,114 @@
       "language": "English",
       "quiz_score": 16,
       "words_learned": 0,
-      "last_activity": "2025-10-14T19:18:42.470507"
+      "last_activity": "2025-10-15T12:29:57.879905"
     }
   },
   "words": {
     "618397146": [
       {
-        "word": "cat",
-        "translation": "кіт",
+        "word": "Serendipity",
+        "translation": "Серендипність",
         "known": false,
-        "added_at": "2025-10-14T19:21:01.854629"
+        "added_at": "2025-10-15T12:33:13.333599"
       },
       {
-        "word": "Breeze",
-        "translation": "бриз",
+        "word": "Ephemeral",
+        "translation": "Ефемерний",
         "known": false,
-        "added_at": "2025-10-14T19:22:09.601992"
+        "added_at": "2025-10-15T12:33:14.140856"
       },
       {
-        "word": "Dawn",
-        "translation": "Світанок",
+        "word": "Luminous",
+        "translation": "Світнящий",
         "known": false,
-        "added_at": "2025-10-14T19:23:01.929793"
+        "added_at": "2025-10-15T12:33:14.948433"
       },
       {
-        "word": "dog",
-        "translation": "Собака",
+        "word": "Quaint",
+        "translation": "Смішний, дивний",
         "known": false,
-        "added_at": "2025-10-14T19:30:17.357188"
+        "added_at": "2025-10-15T12:33:15.808991"
       },
       {
-        "word": "fly",
-        "translation": "літати",
+        "word": "Resilient",
+        "translation": "Стійкий",
         "known": false,
-        "added_at": "2025-10-14T19:30:26.828598"
-      },
-      {
-        "word": "god",
-        "translation": "бог",
-        "known": false,
-        "added_at": "2025-10-14T19:33:14.072559"
-      },
-      {
-        "word": "Horizon",
-        "translation": "горизонт",
-        "known": false,
-        "added_at": "2025-10-14T19:36:32.834028"
-      },
-      {
-        "word": "Whisper",
-        "translation": "шепот",
-        "known": false,
-        "added_at": "2025-10-15T11:18:41.354413"
-      },
-      {
-        "word": "Mystery",
-        "translation": "загадка",
-        "known": false,
-        "added_at": "2025-10-15T11:18:42.221574"
-      },
-      {
-        "word": "Glimmer",
-        "translation": "блиск",
-        "known": false,
-        "added_at": "2025-10-15T11:18:42.986455"
-      },
-      {
-        "word": "Echo",
-        "translation": "ехо",
-        "known": false,
-        "added_at": "2025-10-15T11:18:43.912620"
+        "added_at": "2025-10-15T12:33:16.653904"
       },
       {
         "word": "Tranquil",
-        "translation": "спокійний",
+        "translation": "Спокійний",
         "known": false,
-        "added_at": "2025-10-15T11:18:44.733093"
+        "added_at": "2025-10-15T12:33:17.513562"
+      },
+      {
+        "word": "Vivacious",
+        "translation": "Жвавий, енергійний",
+        "known": false,
+        "added_at": "2025-10-15T12:33:18.383020"
+      },
+      {
+        "word": "Whimsical",
+        "translation": "Капризний, фантазійний",
+        "known": false,
+        "added_at": "2025-10-15T12:33:19.276487"
+      },
+      {
+        "word": "Zealous",
+        "translation": "Запальний, ревний",
+        "known": false,
+        "added_at": "2025-10-15T12:33:20.156988"
+      },
+      {
+        "word": "Nostalgic",
+        "translation": "Ностальгічний",
+        "known": false,
+        "added_at": "2025-10-15T12:33:21.267029"
+      },
+      {
+        "word": "love",
+        "translation": "Любов",
+        "known": false,
+        "added_at": "2025-10-15T12:34:51.298764"
+      },
+      {
+        "word": "Meli",
+        "translation": "мелі",
+        "known": false,
+        "added_at": "2025-10-15T12:35:29.083543"
+      }
+    ],
+    "7542336711": [
+      {
+        "word": "Serendipity",
+        "translation": "несподівана щаслива знахідка",
+        "known": false,
+        "added_at": "2025-10-15T11:36:57.319709"
+      },
+      {
+        "word": "Ephemeral",
+        "translation": "короткочасний, мимолітній",
+        "known": false,
+        "added_at": "2025-10-15T11:36:58.360010"
+      },
+      {
+        "word": "Luminous",
+        "translation": "світячий, сяючий",
+        "known": false,
+        "added_at": "2025-10-15T11:36:59.201379"
+      },
+      {
+        "word": "Quixotic",
+        "translation": "романтично-наївний, нереалістичний",
+        "known": false,
+        "added_at": "2025-10-15T11:37:00.031315"
+      },
+      {
+        "word": "Petrichor",
+        "translation": "запах землі після дощу",
+        "known": false,
+        "added_at": "2025-10-15T11:37:01.022103"
       }
     ]
   }
